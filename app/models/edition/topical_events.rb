@@ -21,9 +21,7 @@ module Edition::TopicalEvents
     true
   end
 
-  module InstanceMethods
-    def search_index
-      super.merge("topical_events" => topical_events.map(&:slug))
-    end
+  def search_index
+    super.merge("topical_events" => topical_events.map(&:slug))
   end
 end
