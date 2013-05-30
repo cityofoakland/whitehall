@@ -172,7 +172,7 @@ module Whitehall::DocumentFilter
       publication_filter_option = stub_publication_filter_option("testing filter - statistics", publication_types: [stub('type', id: 123), stub('other type', id: 234)], edition_types: ["EditionType"])
 
       filtered_scope = stub_document_scope('filtered_scope')
-      expected_query = "(`editions`.`publication_type_id` IN (123, 234) OR `editions`.`type` IN ('EditionType'))"
+      expected_query = "(editions.publication_type_id IN (123, 234) OR editions.type IN ('EditionType'))"
       document_scope.expects(:where).with(responds_with(:to_sql, expected_query)).returns(filtered_scope)
 
       filter = create_filter(document_scope, publication_filter_option: publication_filter_option.slug)
