@@ -198,7 +198,6 @@ GEM
     multi_json (1.0.4)
     multipart-post (1.2.0)
     mustache (0.99.4)
-    mysql2 (0.3.11)
     newrelic_rpm (3.5.3.25)
     nokogiri (1.5.9)
     null_logger (0.0.1)
@@ -223,6 +222,7 @@ GEM
     parallel (0.6.5)
     parallel_tests (0.13.1)
       parallel
+    pg (0.15.1)
     plek (1.1.0)
       builder
     polyglot (0.3.3)
@@ -397,10 +397,10 @@ DEPENDENCIES
   mini_magick
   minitest (= 2.5.1)
   mocha (= 0.13.2)
-  mysql2
   newrelic_rpm (= 3.5.3.25)
   nokogiri
   parallel_tests
+  pg
   plek (= 1.1.0)
   quiet_assets
   rabl
