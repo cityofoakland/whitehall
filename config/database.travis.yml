@@ -1,8 +1,9 @@
 test:
-  adapter: mysql2
-  host: localhost
-  database: whitehall_test
-  username: whitehall
-  password: whitehall
-  encoding: utf8
+  adapter: postgresql
+  encoding: unicode
+  database: progress_test
   pool: 5
+  username: postgres
+  port: 5432
+  host: localhost
+  min_messages: WARNING
