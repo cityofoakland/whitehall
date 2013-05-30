@@ -1107,7 +1107,7 @@ ActiveRecord::Schema.define(:version => 20130531162954) do
     t.string   "item_type",  :null => false
     t.integer  "item_id",    :null => false
     t.string   "event",      :null => false
-    t.string   "whodunnit"
+    t.integer  "whodunnit"
     t.text     "object"
     t.datetime "created_at"
     t.text     "state"
