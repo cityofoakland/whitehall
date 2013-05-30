@@ -384,7 +384,7 @@ ActiveRecord::Schema.define(:version => 20130531162954) do
     t.string   "locale"
     t.string   "title"
     t.text     "summary"
-    t.text     "body",       :limit => 16777215
+    t.text     "body"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -580,7 +580,7 @@ ActiveRecord::Schema.define(:version => 20130531162954) do
     t.datetime "enqueued_at"
     t.datetime "started_at"
     t.datetime "finished_at"
-    t.text     "log",                  :limit => 2147483647
+    t.text     "log"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -660,7 +660,7 @@ ActiveRecord::Schema.define(:version => 20130531162954) do
   create_table "html_versions", :force => true do |t|
     t.integer  "edition_id"
     t.string   "title"
-    t.text     "body",       :limit => 2147483647
+    t.text     "body"
     t.string   "slug"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -706,7 +706,7 @@ ActiveRecord::Schema.define(:version => 20130531162954) do
   create_table "imports", :force => true do |t|
     t.string   "original_filename"
     t.string   "data_type"
-    t.text     "csv_data",           :limit => 2147483647
+    t.text     "csv_data"
     t.text     "already_imported"
     t.text     "successful_rows"
     t.integer  "creator_id"
@@ -1053,13 +1053,13 @@ ActiveRecord::Schema.define(:version => 20130531162954) do
   add_index "supporting_pages", ["slug"], :name => "index_supporting_documents_on_slug"
 
   create_table "take_part_pages", :force => true do |t|
-    t.string   "title",                                 :null => false
-    t.string   "slug",                                  :null => false
-    t.string   "summary",                               :null => false
-    t.text     "body",              :limit => 16777215, :null => false
+    t.string   "title",             :null => false
+    t.string   "slug",              :null => false
+    t.string   "summary",           :null => false
+    t.text     "body",              :null => false
     t.string   "carrierwave_image"
     t.string   "image_alt_text"
-    t.integer  "ordering",                              :null => false
+    t.integer  "ordering",          :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -1196,7 +1196,6 @@ ActiveRecord::Schema.define(:version => 20130531162954) do
   end
 
   add_index "worldwide_organisation_world_locations", ["world_location_id"], :name => "index_worldwide_org_world_locations_on_world_location_id"
-  add_index "worldwide_organisation_world_locations", ["worldwide_organisation_id"], :name => "index_worldwide_org_world_locations_on_worldwide_organisation_id"
 
   create_table "worldwide_organisations", :force => true do |t|
     t.string   "url"
