@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130520154538) do
+ActiveRecord::Schema.define(:version => 20130530134509) do
 
   create_table "access_and_opening_times", :force => true do |t|
     t.text     "body"
@@ -1098,7 +1098,7 @@ ActiveRecord::Schema.define(:version => 20130520154538) do
     t.string   "item_type",  :null => false
     t.integer  "item_id",    :null => false
     t.string   "event",      :null => false
-    t.string   "whodunnit"
+    t.integer  "whodunnit"
     t.text     "object"
     t.datetime "created_at"
     t.text     "state"
