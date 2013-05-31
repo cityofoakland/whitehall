@@ -403,7 +403,7 @@ DEPENDENCIES
   minitest (= 2.5.1)
   mocha (= 0.13.2)
   mysql2
-  newrelic_rpm (= 3.5.3.25)
+  newrelic_rpm
   nokogiri
   parallel_tests
   plek (= 1.1.0)
