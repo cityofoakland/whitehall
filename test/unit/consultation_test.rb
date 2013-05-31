@@ -73,7 +73,7 @@ class ConsultationTest < ActiveSupport::TestCase
 
     draft_consultation = published_consultation.create_draft(create(:policy_writer))
 
-    assert_equal published_consultation.inapplicable_nations, draft_consultation.inapplicable_nations
+    assert_same_elements published_consultation.inapplicable_nations, draft_consultation.inapplicable_nations
     assert_equal "http://wales.gov.uk", draft_consultation.nation_inapplicabilities.find_by_nation_id(Nation.wales.id).alternative_url
     assert_equal "http://scot.gov.uk", draft_consultation.nation_inapplicabilities.find_by_nation_id(Nation.scotland.id).alternative_url
   end
