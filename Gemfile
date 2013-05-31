@@ -3,11 +3,11 @@ source 'https://BnrJb6FZyzspBboNJzYZ@gem.fury.io/govuk/'
 
 gem 'delayed_job_active_record'
 gem 'statsd-ruby', '1.0.0', require: "statsd"
-gem 'rails', '3.1.12'
+gem 'rails', '3.2.13'
 gem 'pg'
-gem 'jquery-rails'
+gem 'jquery-rails', "1.0.19"
 gem 'transitions', require: ['transitions', 'active_record/transitions']
-gem 'carrierwave'
+gem 'carrierwave', '0.5.7'
 gem 'govspeak', '~> 1.2.3'
 gem 'kramdown', '~> 0.13.8'
 gem 'validates_email_format_of'
@@ -15,7 +15,6 @@ gem 'friendly_id', '4.0.9'
 gem 'babosa'
 gem 'nokogiri'
 gem 'rake', '0.9.2'
-gem 'boomerang-rails'
 gem 'slimmer', '3.15.0'
 gem 'plek', '1.1.0'
 gem 'isbn_validation'
@@ -25,7 +24,7 @@ gem 'addressable'
 gem 'exception_notification', require: 'exception_notifier'
 gem 'rabl'
 gem 'aws-ses', require: 'aws/ses'
-gem 'newrelic_rpm', '3.5.3.25'
+gem 'newrelic_rpm'
 gem 'lograge'
 gem 'unicorn'
 gem 'kaminari'
@@ -37,11 +36,12 @@ gem 'shared_mustache', '~> 0.0.2'
 gem 'rails-i18n'
 gem 'globalize3', git: 'https://github.com/svenfuchs/globalize3.git', ref: 'ab69160ad'
 gem 'link_header'
+gem 'pry-rails'
 
 group :assets do
   gem 'govuk_frontend_toolkit', '0.19.2'
   gem 'sass', '3.2.8'
-  gem 'sass-rails', '3.1.4'
+  gem 'sass-rails'
   gem 'uglifier'
 end
 
@@ -62,7 +62,7 @@ group :test do
   gem 'factory_girl'
   gem 'hash_syntax'
   gem 'mocha', '0.13.2', require: false
-  gem 'test_track'
+  gem 'test_track', github: 'episko/test_track'
   gem 'timecop'
   gem 'webmock', require: false
   gem 'crack', '~> 0.3.2'
