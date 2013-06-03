@@ -84,8 +84,8 @@ class WorldLocationTest < ActiveSupport::TestCase
     delegation_type = WorldLocationType::InternationalDelegation
 
     location_1 = create(:world_location, world_location_type: world_location_type)
-    location_2 = create(:world_location, world_location_type: delegation_type)
-    location_3 = create(:world_location, world_location_type: delegation_type)
+    location_2 = create(:world_location, world_location_type: delegation_type, name: "Africa")
+    location_3 = create(:world_location, world_location_type: delegation_type, name: "Spain")
 
     assert_equal [ [world_location_type, [location_1]] , [delegation_type, [location_2, location_3]] ], WorldLocation.all_by_type
   end
