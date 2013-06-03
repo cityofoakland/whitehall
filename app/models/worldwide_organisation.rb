@@ -64,7 +64,7 @@ class WorldwideOrganisation < ActiveRecord::Base
   end
 
   def main_office
-    original_main_office || offices.first
+    original_main_office || offices.order(:id).first
   end
 
   def other_offices

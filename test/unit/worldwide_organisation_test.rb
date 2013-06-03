@@ -104,11 +104,10 @@ class WorldwideOrganisationTest < ActiveSupport::TestCase
   end
 
   test "can list other offices" do
-    offices = [build(:worldwide_office), build(:worldwide_office)]
-
-    assert_equal [], build(:worldwide_organisation, offices: []).other_offices
-    assert_equal [], build(:worldwide_organisation, offices: offices.take(1)).other_offices
-    assert_equal [offices.last], build(:worldwide_organisation, offices: offices, main_office: offices.first).other_offices
+    offices = [create(:worldwide_office), create(:worldwide_office)]
+    assert_equal [], create(:worldwide_organisation, offices: []).other_offices
+    assert_equal [], create(:worldwide_organisation, offices: offices.take(1)).other_offices
+    assert_equal [offices.last], create(:worldwide_organisation, offices: offices, main_office: offices.first).other_offices
   end
 
   test "an ambassadorial role is a primary role and not a secondary one" do
