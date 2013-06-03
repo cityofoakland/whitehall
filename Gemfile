@@ -54,6 +54,7 @@ group :development, :staging, :test do
   gem 'parallel_tests'
   gem 'bullet'
   gem 'test-queue'
+  gem 'pry-rails'
 end
 
 group :test do
