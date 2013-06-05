@@ -336,7 +336,7 @@ GEM
     tilt (1.3.7)
     timecop (0.6.1)
     tins (0.8.0)
-    transitions (0.1.9)
+    transitions (0.1.8)
     treetop (1.4.12)
       polyglot
       polyglot (>= 0.3.1)
@@ -430,7 +430,7 @@ DEPENDENCIES
   test_track
   thin (= 1.5.0)
   timecop
-  transitions
+  transitions (= 0.1.8)
   uglifier
   unicorn
   validates_email_format_of

@@ -30,8 +30,8 @@ module Edition::Workflow
     end
 
     state_machine auto_scopes: true do
-      state :imported
       state :draft
+      state :imported
       state :submitted
       state :rejected
       state :scheduled

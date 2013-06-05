@@ -6,7 +6,7 @@ gem 'statsd-ruby', '1.0.0', require: "statsd"
 gem 'rails', '3.1.12'
 gem 'pg'
 gem 'jquery-rails'
-gem 'transitions', require: ['transitions', 'active_record/transitions']
+gem 'transitions', '0.1.8', require: ['transitions', 'active_record/transitions']
 gem 'carrierwave'
 gem 'govspeak', '~> 1.2.3'
 gem 'kramdown', '~> 0.13.8'
