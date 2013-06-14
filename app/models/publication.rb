@@ -65,12 +65,9 @@ class Publication < Publicationesque
     publication_type == PublicationType::NationalStatistics
   end
 
+  # @todo add a migration to rename the publication_date field as it is a DateTime
   def first_public_at
-    if publication_date
-      publication_date.to_datetime
-    else
-      first_published_at
-    end
+    publication_date
   end
 
   def statistics?
