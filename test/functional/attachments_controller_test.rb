@@ -19,7 +19,7 @@ class AttachmentsControllerTest < ActionController::TestCase
     assert_redirected_to @controller.view_context.path_to_image('thumbnail-placeholder.png')
   end
 
-  test 'attachments that aren\'t visible and haven\'t been replaced are redirected to the placeholder image' do
+  test 'attachments that aren\'t visible and have been replaced are redirected to the replacement' do
     replacement = create(:attachment_data)
     ad = create(:attachment_data, replaced_by: replacement)
     @controller.stubs(:attachment_visible?).with(ad.to_param).returns false
