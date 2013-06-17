@@ -65,7 +65,6 @@ class Publication < Publicationesque
     publication_type == PublicationType::NationalStatistics
   end
 
-  # @todo add a migration to rename the publication_date field as it is a DateTime
   def first_public_at
     publication_date
   end
