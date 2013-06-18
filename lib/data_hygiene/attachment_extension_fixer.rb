@@ -19,7 +19,7 @@ module DataHygiene
 
       if attachment_needs_fixing?
         logger.info("AttachmentData (#{attachment_data.id}) replaced #{filename} with #{corrected_filename}")
-        AttachmentData.create!(file: corrected_tmp_file, to_replace_id: attachment_data)
+        AttachmentData.create!(file: corrected_tmp_file, to_replace_id: attachment_data.id)
         cleanup
       end
     end
